@@ -1,0 +1,48 @@
+{
+    "name": "dayGLANCE",
+    "slug": "dayglance",
+    "categories": [
+        10
+    ],
+    "date_created": "2026-09-06",
+    "type": "ct",
+    "updateable": true,
+    "privileged": false,
+    "architectures": [
+        "amd64"
+    ],
+    "interface_port": 6767,
+    "documentation": "https://docs.dayglance.app",
+    "website": "https://dayglance.app/",
+    "repository": "https://github.com/krelltunez/dayGLANCE",
+    "logo": "https://raw.githubusercontent.com/krelltunez/dayGLANCE/main/public/icon-512.png",
+    "description": "Privacy-first day planner with visual time-blocking, goals and projects, habit tracking, focus mode and calendar import. All data stays in the browser; optional WebDAV/Nextcloud sync or GLANCEvault backend.",
+    "install_methods": [
+        {
+            "type": "default",
+            "script": "ct/dayglance.sh",
+            "config_path": "/etc/nginx/sites-available/dayglance",
+            "resources": {
+                "cpu": 2,
+                "ram": 2048,
+                "hdd": 8,
+                "os": "Debian",
+                "version": "13"
+            }
+        }
+    ],
+    "default_credentials": {
+        "username": null,
+        "password": null
+    },
+    "notes": [
+        {
+            "text": "dayGLANCE stores all planner data in your browser - configure sync (WebDAV, Nextcloud or GLANCEvault) from the app's Settings to keep data across devices.",
+            "type": "info"
+        },
+        {
+            "text": "For HTTPS, put a reverse proxy in front of port 6767.",
+            "type": "info"
+        }
+    ]
+}
