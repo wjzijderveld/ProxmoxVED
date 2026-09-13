@@ -1,0 +1,48 @@
+{
+    "name": "lifeGLANCE",
+    "slug": "lifeglance",
+    "categories": [
+        10
+    ],
+    "date_created": "2026-09-13",
+    "type": "ct",
+    "updateable": true,
+    "privileged": false,
+    "architectures": [
+        "amd64"
+    ],
+    "interface_port": 6769,
+    "documentation": "https://github.com/krelltunez/lifeGLANCE#readme",
+    "website": "https://lifeglance.app/",
+    "repository": "https://github.com/krelltunez/lifeGLANCE",
+    "logo": "https://raw.githubusercontent.com/krelltunez/lifeGLANCE/main/public/icon-512x512.png",
+    "description": "Privacy-first, zoomable personal timeline for milestones across your past and future, with local browser storage, media attachments, import and export, and optional encrypted sync.",
+    "install_methods": [
+        {
+            "type": "default",
+            "script": "ct/lifeglance.sh",
+            "config_path": "/etc/nginx/sites-available/lifeglance",
+            "resources": {
+                "cpu": 1,
+                "ram": 512,
+                "hdd": 4,
+                "os": "Debian",
+                "version": "13"
+            }
+        }
+    ],
+    "default_credentials": {
+        "username": null,
+        "password": null
+    },
+    "notes": [
+        {
+            "text": "lifeGLANCE stores timeline data locally in the browser. Configure optional WebDAV or GLANCEvault sync in the app for cross-device access.",
+            "type": "info"
+        },
+        {
+            "text": "For HTTPS, put a reverse proxy in front of port 6769.",
+            "type": "info"
+        }
+    ]
+}
