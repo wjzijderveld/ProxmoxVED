@@ -1,0 +1,48 @@
+{
+    "name": "lastGLANCE",
+    "slug": "lastglance",
+    "categories": [
+        10
+    ],
+    "date_created": "2026-09-13",
+    "type": "ct",
+    "updateable": true,
+    "privileged": false,
+    "architectures": [
+        "amd64"
+    ],
+    "interface_port": 6768,
+    "documentation": "https://github.com/krelltunez/lastGLANCE#readme",
+    "website": "https://lastglance.app/",
+    "repository": "https://github.com/krelltunez/lastGLANCE",
+    "logo": "https://raw.githubusercontent.com/krelltunez/lastGLANCE/main/public/icon-512.png",
+    "description": "Privacy-first recency tracker for chores and upkeep, with cadence tracking, history, reminders, optional WebDAV or Nextcloud sync, and a progressive web app interface.",
+    "install_methods": [
+        {
+            "type": "default",
+            "script": "ct/lastglance.sh",
+            "config_path": "/etc/nginx/sites-available/lastglance",
+            "resources": {
+                "cpu": 1,
+                "ram": 512,
+                "hdd": 4,
+                "os": "Debian",
+                "version": "13"
+            }
+        }
+    ],
+    "default_credentials": {
+        "username": null,
+        "password": null
+    },
+    "notes": [
+        {
+            "text": "lastGLANCE stores tracker data locally in the browser. Configure optional WebDAV or Nextcloud sync in the app to use it across devices.",
+            "type": "info"
+        },
+        {
+            "text": "For HTTPS, put a reverse proxy in front of port 6768.",
+            "type": "info"
+        }
+    ]
+}
