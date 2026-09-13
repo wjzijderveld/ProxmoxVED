@@ -49,6 +49,7 @@ msg_info "Configuring Nginx"
 cat <<EOF >/etc/nginx/sites-available/lastglance
 server {
   listen 6768;
+  listen [::]:6768;
   server_name _;
   root /opt/lastglance/dist;
   index index.html;
