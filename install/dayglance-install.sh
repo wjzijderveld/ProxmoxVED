@@ -51,6 +51,7 @@ msg_info "Configuring Nginx"
 cat <<EOF >/etc/nginx/sites-available/dayglance
 server {
   listen 6767;
+  listen [::]:6767;
   server_name _;
   root /opt/dayglance/dist;
   index index.html;
